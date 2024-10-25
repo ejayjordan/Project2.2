@@ -5,8 +5,7 @@ import React, { useEffect, useState } from 'react';
 let difficulty: number
 
 export default function Home() {
-const [data, setData] = useState<any[]>([]);
-  const router = useRouter()
+const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch('/cards.json')
@@ -16,10 +15,10 @@ const [data, setData] = useState<any[]>([]);
       })
   }, [])
 
-  const [selectedDifficulty, setSelectedDifficulty] = React.useState([" ", " "]);
+  //const [selectedDifficulty, setSelectedDifficulty] = React.useState([" ", " "]);
 
-  function handleDifficultyClick(){
-    data[3] = difficulty
+  //function handleDifficultyClick(){
+    //data[3] = difficulty
 /*
     for(let i=0; i<10; i++){
         if(data[String(i)]["time"] != 0){
@@ -53,7 +52,7 @@ const [data, setData] = useState<any[]>([]);
         setSelectedDifficulty(selectedDifficulty)
         router.refresh()
         }}
-*/
+
  return (
     <div>
       <h1>Select Difficulty</h1>
@@ -65,4 +64,5 @@ const [data, setData] = useState<any[]>([]);
     </div>
   );
 }
+  */
 }

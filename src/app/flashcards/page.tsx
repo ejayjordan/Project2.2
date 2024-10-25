@@ -11,7 +11,7 @@ let understoodButtons = false
 let Names: any[] = []
 
 export default function Flashcards() {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState([]);
   const router = useRouter()
 
   useEffect(() => {
