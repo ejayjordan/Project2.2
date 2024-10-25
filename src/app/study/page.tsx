@@ -1,4 +1,4 @@
-'use client'
+/*'use client'
 import React from 'react'
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
@@ -58,4 +58,4 @@ function Study() {
     </>
   );
 }
-export default Study
+export default Study*/

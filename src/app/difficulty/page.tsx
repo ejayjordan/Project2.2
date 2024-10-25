@@ -1,4 +1,4 @@
-'use client';
+/*'use client';
 
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
@@ -64,5 +64,5 @@ const [data, setData] = useState([]);
     </div>
   );
 }
-  */
-}
+  
+}*/
