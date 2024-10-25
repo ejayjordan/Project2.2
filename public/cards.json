@@ -1,0 +1,62 @@
+{
+    "Card 1":{
+        "prompt": "2+2",
+        "answer": "4",
+        "understood": 10,
+        "time":0
+    },
+    "Card 2":{
+        "prompt": "2x2",
+        "answer": "4",
+        "understood": 10,
+        "time":0
+    },
+    "Card 3":{
+        "prompt": "2-2",
+        "answer": "0",
+        "understood": 10,
+        "time":0
+    },
+    "Card 4":{
+        "prompt": "12-2",
+        "answer": "10",
+        "understood": 10,
+        "time":0
+    },
+    "Card 5":{
+        "prompt": "12x2",
+        "answer": "24",
+        "understood": 10,
+        "time":0
+    },
+    "Card 6":{
+        "prompt": "10-2",
+        "answer": "8",
+        "understood": 10,
+        "time":0
+    },
+    "Card 7":{
+        "prompt": "10x2",
+        "answer": "20",
+        "understood": 10,
+        "time":0
+    },
+    "Card 8":{
+        "prompt": "12-4",
+        "answer": "8",
+        "understood": 10,
+        "time":0
+    },
+    "Card 9":{
+        "prompt": "12-6",
+        "answer": "6",
+        "understood": 10,
+        "time":0
+    },
+    "Card 10":{
+        "prompt": "6x2",
+        "answer": "12",
+        "understood": 10,
+        "time":0
+    }
+}
