@@ -2,7 +2,6 @@
 
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-let Names: any[] = [" "]
 let difficulty: number
 
 export default function Home() {
@@ -17,17 +16,12 @@ const [data, setData] = useState<any[]>([]);
       })
   }, [])
 
-  if(data != null){
-    Names = Object.getOwnPropertyNames(data)
-  }
-
   const [selectedDifficulty, setSelectedDifficulty] = React.useState([" ", " "]);
 
   function handleDifficultyClick(){
     data[3] = difficulty
-
+/*
     for(let i=0; i<10; i++){
-        test = String(i)
         if(data[String(i)]["time"] != 0){
             data[String(i)]["time"]=data[i]["time"]-1
         }
@@ -59,8 +53,8 @@ const [data, setData] = useState<any[]>([]);
         setSelectedDifficulty(selectedDifficulty)
         router.refresh()
         }}
-
-  return (
+*/
+ return (
     <div>
       <h1>Select Difficulty</h1>
       <button id="Easy" onClick={handleDifficultyClick} />
@@ -70,4 +64,5 @@ const [data, setData] = useState<any[]>([]);
       <p>Selected Difficulty: {selectedDifficulty}</p>
     </div>
   );
+}
 }

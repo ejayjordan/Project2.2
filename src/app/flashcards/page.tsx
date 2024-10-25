@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 let cards: string[] = []
 let drawCard: any = " "
-let cardData = [" ", " ", " ", " "]
+const cardData = [" ", " ", " ", " "]
 let nextPrompt = true
 let showAnswer = false
 let understoodButtons = false
