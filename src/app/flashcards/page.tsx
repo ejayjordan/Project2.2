@@ -95,3 +95,11 @@ export default function Flashcards() {
 
 
 }*/
+
+export default function Home() {
+  return (
+    <>
+    <text>This is the Flashcards page.</text>
+    </>
+  );
+}

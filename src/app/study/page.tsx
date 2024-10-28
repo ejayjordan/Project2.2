@@ -59,3 +59,11 @@ function Study() {
   );
 }
 export default Study*/
+
+export default function Home() {
+  return (
+    <>
+    <text>This is the study page.</text>
+    </>
+  );
+}
