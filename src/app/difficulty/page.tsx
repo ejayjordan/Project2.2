@@ -66,3 +66,11 @@ const [data, setData] = useState([]);
 }
   
 }*/
+
+export default function Home() {
+  return (
+    <>
+    <text>This is the difficulty page.</text>
+    </>
+  );
+}
