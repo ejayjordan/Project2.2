@@ -6,15 +6,15 @@ import { PrismaClient } from "@prisma/client"
 
 export default async function Home() {
   const prisma = new PrismaClient()
-  let cards = await prisma.video.findMany();
+  let cards = await prisma.flashcards.findMany();
   console.log(cards)
+  const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.prompt}</li>)
   const router = useRouter();
 
   function homePage(){
     let homePage = true;
     let viewCards = false;
     let addCards=false;
-    const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.name}</li>)
     router.refresh()
   }
 
