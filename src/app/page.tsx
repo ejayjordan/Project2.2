@@ -1,16 +1,20 @@
 'use client'
 import React from 'react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
+import { PrismaClient } from "@prisma/client"
 
-
-
-export default function Home() {
+export default async function Home() {
+  const prisma = new PrismaClient()
+  let cards = await prisma.video.findMany();
+  console.log(cards)
   const router = useRouter();
 
   function homePage(){
     let homePage = true;
     let viewCards = false;
     let addCards=false;
+    const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.name}</li>)
     router.refresh()
   }
 
@@ -29,7 +33,7 @@ export default function Home() {
   }
 
   return (
-    <>
+    <main>
     <li><button onClick={homePage}>
     Play Flashcards
     </button></li>
@@ -41,8 +45,10 @@ export default function Home() {
     <li><button onClick={addCards}>
     Add Flashcards
     </button></li>
+
+    {cardDisplay}
     
-    </>
+    </main>
 
   );
 }
