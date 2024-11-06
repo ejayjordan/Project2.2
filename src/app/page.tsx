@@ -1,48 +1,49 @@
 'use client'
 import React from 'react'
 import { useRouter } from 'next/navigation'
-import Image from 'next/image'
 import { PrismaClient } from "@prisma/client"
 
+const prisma = new PrismaClient()
+const router = useRouter();
+
 export default async function Home() {
-  const prisma = new PrismaClient()
-  let cards = await prisma.flashcards.findMany();
+  const cards = await prisma.flashcards.findMany();
   console.log(cards)
   const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.prompt}</li>)
-  const router = useRouter();
 
-  function homePage(){
-    let homePage = true;
-    let viewCards = false;
-    let addCards=false;
-    router.refresh()
-  }
 
-  function viewCards(){
-    let homePage = false;
-    let viewCards = true;
-    let addCards = false;
-    router.refresh()
-  }
+ //function homePage(){
+    //let homePage = true;
+    //let viewCards = false;
+    //let addCards=false;
+    //router.refresh()
+ // }
 
-  function addCards(){
-    let homePage = false;
-    let viewCards = false;
-    let addCards = true;
-    router.refresh()
-  }
+  //function viewCards(){
+    //let homePage = false;
+    //let viewCards = true;
+    //let addCards = false;
+    //router.refresh()
+  //}
+
+  //function addCards(){
+    //let homePage = false;
+    //let viewCards = false;
+    //let addCards = true;
+    //router.refresh()
+  //}
 
   return (
     <main>
-    <li><button onClick={homePage}>
+    <li><button>
     Play Flashcards
     </button></li>
 
-    <li><button onClick={viewCards}>
+    <li><button>
     Change Difficulty
     </button></li>
 
-    <li><button onClick={addCards}>
+    <li><button>
     Add Flashcards
     </button></li>
 
