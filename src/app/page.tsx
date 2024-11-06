@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import { useRouter } from 'next/navigation'
+//import { useRouter } from 'next/navigation'
 import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
-const router = useRouter();
+//const router = useRouter();
 
 export default async function Home() {
   const cards = await prisma.flashcards.findMany();
