@@ -10,10 +10,10 @@ let currentCard = {}
 export default async function Home() {
   const cards = await prisma.flashcards.findMany();
   console.log(cards)
-  const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.prompt}</li> )
-  //currentCard = cards[Math.floor(Math.random()*cards.length)]
+  const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.prompt}</li>)
+  currentCard = cards[Math.floor(Math.random()*cards.length)]
 
-async function Easy(currentCard: string){
+async function Easy(currentCard: Object) {
   await prisma.flashcards.update({
     where: { id: 0 },
     data: {
