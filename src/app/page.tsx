@@ -6,22 +6,30 @@ import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient()
 
 let homePage = true
-let viewCards = false
-let addCards = false
+//let viewCards = false
+//let addCards = false
 
 export default async function Home() {
   const router = useRouter();
   const cards = await prisma.flashcards.findMany();
   console.log(cards)
-  const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.prompt}</li>)
+  const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.prompt}</li> )
 
 
-function homePage(){
+function homePageShow(){
   let homePage = true;
   let viewCards = false;
   let addCards = false;
   router.refresh()
  }
+
+  { homePage && 
+    <div>
+      Click on the button to test your answer.
+
+      {cardDisplay}
+    </div>
+  }
 
   //function viewCards(){
     //let homePage = false;
@@ -39,7 +47,7 @@ function homePage(){
 
   return (
     <main>
-    <li><button onClick={homePage}>
+    <li><button onClick={homePageShow}>
     Play Flashcards
     </button></li>
 
@@ -50,8 +58,6 @@ function homePage(){
     <li><button>
     Add Flashcards
     </button></li>
-
-    {cardDisplay}
     
     </main>
 
