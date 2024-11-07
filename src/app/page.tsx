@@ -4,22 +4,21 @@ import { useRouter } from 'next/navigation'
 import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
-
+const router = useRouter();
 let homePage = true
 //let viewCards = false
 //let addCards = false
 
 export default async function Home() {
-  const router = useRouter();
   const cards = await prisma.flashcards.findMany();
   console.log(cards)
   const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.prompt}</li> )
 
 
 function homePageShow(){
-  let homePage = true;
-  let viewCards = false;
-  let addCards = false;
+  homePage = true;
+  //let viewCards = false;
+  //let addCards = false;
   router.refresh()
  }
 
