@@ -1,10 +1,8 @@
 'use client'
-import React from 'react'
-import { useRouter } from 'next/navigation'
+import React, { use } from 'react'
 import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
-const router = useRouter();
 let homePage = true
 //let viewCards = false
 //let addCards = false
@@ -19,7 +17,7 @@ function homePageShow(){
   homePage = true;
   //let viewCards = false;
   //let addCards = false;
-  router.refresh()
+  window.location.reload();
  }
 
   { homePage && 
