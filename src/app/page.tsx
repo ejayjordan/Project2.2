@@ -18,13 +18,13 @@ function homePageShow(){
   window.location.reload();
  }
 
-  { homePage && 
+  ( homePage && 
     <div>
       Click on the button to test your answer.
 
       {cardDisplay}
     </div>
-  }
+  )
 
   //function viewCards(){
     //let homePage = false;
