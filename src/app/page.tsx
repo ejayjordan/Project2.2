@@ -18,14 +18,6 @@ function homePageShow(){
   window.location.reload();
  }
 
-  ( homePage && 
-    <div>
-      Click on the button to test your answer.
-
-      {cardDisplay}
-    </div>
-  )
-
   //function viewCards(){
     //let homePage = false;
     //let viewCards = true;
@@ -53,8 +45,18 @@ function homePageShow(){
     <li><button>
     Add Flashcards
     </button></li>
+
+    { homePage && 
+    <div>
+      Click on the button to test your answer.
+
+      {cardDisplay}
+    </div>
+    }
     
     </main>
+
+    
 
   );
 }
