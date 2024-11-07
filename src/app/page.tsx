@@ -3,6 +3,7 @@ import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
 let homePage = true
+let currentCard = {}
 //let viewCards = false
 //let addCards = false
 
@@ -10,7 +11,16 @@ export default async function Home() {
   const cards = await prisma.flashcards.findMany();
   console.log(cards)
   const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.prompt}</li> )
+  currentCard = cards[Math.floor(Math.random()*cards.length)]
 
+async function Easy(currentCard: string){
+  await prisma.flashcards.update({
+    where: { id: 0 },
+    data: {
+      correct: 10,
+      time: 1 }
+    })
+  } 
 
 function homePageShow(){
   homePage = true;
