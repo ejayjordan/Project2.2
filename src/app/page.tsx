@@ -13,7 +13,7 @@ export default async function Home() {
   const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.prompt}</li>)
   currentCard = cards[Math.floor(Math.random()*cards.length)]
 
-async function Easy(currentCard: Object) {
+async function Easy(_currentCard: object) {
   await prisma.flashcards.update({
     where: { id: 0 },
     data: {
