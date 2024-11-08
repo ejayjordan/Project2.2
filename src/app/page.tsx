@@ -1,75 +1,11 @@
 'use client'
 import { PrismaClient } from "@prisma/client"
 
-const prisma = new PrismaClient()
-let homePage = true
-let currentCard = {}
-//let viewCards = false
-//let addCards = false
-
-export default async function Home() {
-  const cards = await prisma.flashcards.findMany();
-  console.log(cards)
-  const cardDisplay = cards.map((cards, index) => <li key  = {index}>{cards.prompt}</li>)
-  currentCard = cards[Math.floor(Math.random()*cards.length)]
-
-async function Easy(_currentCard: object) {
-  await prisma.flashcards.update({
-    where: { id: 0 },
-    data: {
-      correct: 10,
-      time: 1 }
-    })
-    console.log("click")
-  } 
-
-function homePageShow(){
-  homePage = true;
-  //let viewCards = false;
-  //let addCards = false;
-  window.location.reload();
- }
-
-  //function viewCards(){
-    //let homePage = false;
-    //let viewCards = true;
-    //let addCards = false;
-    //router.refresh()
-  //}
-
-  //function addCards(){
-    //let homePage = false;
-    //let viewCards = false;
-    //let addCards = true;
-    //router.refresh()
-  //}
+export default function Home() {
 
   return (
     <main>
-    <li><button onClick={homePageShow}>
-    Play Flashcards
-    </button></li>
-
-    <li><button>
-    Change Difficulty
-    </button></li>
-
-    <li><button>
-    Add Flashcards
-    </button></li>
-
-    { homePage && 
-    <div>
-      <button onClick={() => {Easy}}>Easy</button>
-      Click on the button to test your answer.
-
-      {cardDisplay}
-    </div>
-    }
-    
+      Dog, Idk what to put here :|
     </main>
-
-    
-
   );
 }

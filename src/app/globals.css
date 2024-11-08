@@ -21,3 +21,18 @@ utilities {
     text-wrap: balance;
   }
 }
+
+a {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+  color:deepskyblue;
+  -webkit-text-stroke-color: blue;
+  -webkit-text-stroke-width: .5px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+a:hover{
+  color:lightskyblue;
+  text-decoration: underline;
+}
