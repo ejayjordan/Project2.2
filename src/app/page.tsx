@@ -1,10 +1,16 @@
-'use client'
+'use server'
+import { PrismaClient } from '@prisma/client'
+import View from './view/page'
 
-export default function Home() {
+const prisma = new PrismaClient()
 
+export default async function Home() {
+
+  const cardList = await prisma.flashcards.findMany()
   return (
-    <main>
+    <div>
       Dog, Idk what to put here :|
-    </main>
+      <View data={cardList}></View>
+    </div>
   );
 }
