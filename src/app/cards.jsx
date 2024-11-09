@@ -67,7 +67,7 @@ const [cardDisplay, setCardDisplay] = useState({
       
         {playFlashcards && <div>
 
-          <div className="center"><h3>To start Flashcards, click "New Card"</h3></div>
+          <div className="center"><h3>To start Flashcards, click New Card</h3></div>
 
         
        {beginProgram && <div className="center"><div>{beginProgram}</div>
@@ -108,18 +108,18 @@ const [cardDisplay, setCardDisplay] = useState({
           <p>There is a 10 card maximum for this page. Check the console to see further added cards.</p>
 
         {beginProgram && <div className="center">
-        <h3>Card Id: {cardDisplay["id"]}</h3>
-        <h3>Prompt: {cardDisplay["prompt"]}</h3>
-        <h3>Answer:{cardDisplay["answer"]}</h3>
+          <h3>Card Id: {cardDisplay["id"]}</h3>
+          <h3>Prompt: {cardDisplay["prompt"]}</h3>
+          <h3>Answer:{cardDisplay["answer"]}</h3>
 
-        <p>This card is currently set at {cardDisplay["correct"]} difficulty.</p>
-        <p>You may reassign this card's difficulty:</p>
-        <p><button className="checkButtons" onClick={() => easy(cardDisplay["id"])}>
-          <label>Easy</label></button>
-          <button className="checkButtons" onClick={() => medium(cardDisplay["id"])}>
-          <label>Medium</label></button>
-          <button className="checkButtons" onClick={() => hard(cardDisplay["id"])}>
-          <label>Hard</label></button></p></div>}
+          <p>This card is currently set at {cardDisplay["correct"]} difficulty.</p>
+          <p>You may reassign this card's difficulty:</p>
+          <p><button className="checkButtons" onClick={() => easy(cardDisplay["id"])}>
+            <label>Easy</label></button>
+            <button className="checkButtons" onClick={() => medium(cardDisplay["id"])}>
+            <label>Medium</label></button>
+            <button className="checkButtons" onClick={() => hard(cardDisplay["id"])}>
+            <label>Hard</label></button></p></div>}
 
           
         
