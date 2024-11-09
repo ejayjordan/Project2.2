@@ -69,8 +69,7 @@ const [cardDisplay, setCardDisplay] = useState({
 
        <div>{showAnswer && <div>
         <p className="center">This is a series of 10 questions.
-        <br></br>When you're ready -- click Reveal Card
-        </p></div>}
+        <br></br>When you're ready -- click Reveal Card</p></div>}
       
       <div className="center">
       <p>Your Prompt is:</p>
@@ -109,12 +108,11 @@ const [cardDisplay, setCardDisplay] = useState({
 
           <p>This card is currently set at {cardDisplay["correct"]} difficulty.</p>
           <p>You may reassign this card's difficulty</p>
-          <p><button className="checkButtons" onClick={() => easy(cardDisplay["id"])}>
-            <label>Easy</label></button>
-            <button className="checkButtons" onClick={() => medium(cardDisplay["id"])}>
-            <label>Medium</label></button>
-            <button className="checkButtons" onClick={() => hard(cardDisplay["id"])}>
-            <label>Hard</label></button></p></div>}
+          <p>
+            <button className="checkButtons" onClick={() => easy(cardDisplay["id"])}><label>Easy</label></button>
+            <button className="checkButtons" onClick={() => medium(cardDisplay["id"])}><label>Medium</label></button>
+            <button className="checkButtons" onClick={() => hard(cardDisplay["id"])}><label>Hard</label></button>
+          </p></div>}
 
           
         
