@@ -69,7 +69,7 @@ const [cardDisplay, setCardDisplay] = useState({
 
        <div>{showAnswer && <div>
         <p className="center">This is a series of 10 questions.
-        <br></br>When you're ready, click Reveal Card
+        <br></br>When you're ready -- click Reveal Card
         </p></div>}
       
       <div className="center">
@@ -100,7 +100,7 @@ const [cardDisplay, setCardDisplay] = useState({
         <p><h3>Here you can see all the flashcards.</h3>
           <br></br>Unfortunately, it will not join the ten cards maximum in the game.</p>
 
-          <p>There is a 10 card maximum for this page. Check the console to see further added cards.</p>
+          <p>There is a 10 card maximum for this page.</p>
 
         {beginProgram && <div className="center">
           <h3>Card Id: {cardDisplay["id"]}</h3>
@@ -108,7 +108,7 @@ const [cardDisplay, setCardDisplay] = useState({
           <h3>Answer:{cardDisplay["answer"]}</h3>
 
           <p>This card is currently set at {cardDisplay["correct"]} difficulty.</p>
-          <p>You may reassign this card's difficulty:</p>
+          <p>You may reassign this card's difficulty</p>
           <p><button className="checkButtons" onClick={() => easy(cardDisplay["id"])}>
             <label>Easy</label></button>
             <button className="checkButtons" onClick={() => medium(cardDisplay["id"])}>
