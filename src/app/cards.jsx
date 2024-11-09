@@ -42,11 +42,6 @@ export default function Home(props){
     const cardAnswer = props.data.map((card,index) =>{
       return <div key = {"answer:"+index}>{card.answer}</div>
     })
-    const cardCorrect = props.data.map((card,index) =>{
-      return <div key = {"answer:"+index}>{card.correct}</div>
-    })
-
-
 
 const [cardDisplay, setCardDisplay] = useState({
                    id:0, prompt:"", answer:"", correct:0});
