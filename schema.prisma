@@ -7,7 +7,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Flashcards {
+model flashcards {
   id        Int      @id @default(autoincrement())
   prompt      String
   answer      String
