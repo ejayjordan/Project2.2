@@ -11,7 +11,7 @@ async function createCard(formData : FormData) {
         }
     })
 }
-    
+
 
 export default async function Page( ) {
 
