@@ -1,22 +1,16 @@
 'use server'
 import { PrismaClient } from '@prisma/client'
-import View from './view/page'
-
+import Home from './view/page'
 const prisma = new PrismaClient()
 
-export default async function Home() {
-  const cards = await prisma.flashcards.findMany()
 
-  const cardList = cards.map((cards) => 
-    <li>
-        {cards.prompt}
-    </li> 
-)
+export default async function Extract() {
 
-  return (
-    <div>
-      Dog, Idk what to put here :|
-      {cardList}
-    </div>
-  );
+const dataList = await prisma.flashcards.findMany()
+
+
+
+return( <div>
+    <Home data={dataList}></Home>
+</div> )
 }
